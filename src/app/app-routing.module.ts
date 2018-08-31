@@ -5,10 +5,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule.forRoot([
       {
-           
+        path: '',
+        redirectTo: '/app',
+        pathMatch: 'full'
       }
-  ]) 
-],
-exports: [RouterModule]
+    ])
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
