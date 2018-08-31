@@ -27,9 +27,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Check: Add Bootstrap
-
+npm i bootstrap --save, npm i jquery --save, npm popper.js --save
 Note: for Angular 6.x use in angular.json:
-https://stackoverflow.com/questions/50280975/jquery-not-working-in-angular-6-error-enoent-no-such-file-or-directory-open
+* https://stackoverflow.com/questions/50280975/jquery-not-working-in-angular-6-error-enoent-no-such-file-or-directory-open
 ```
 "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -41,4 +41,8 @@ https://stackoverflow.com/questions/50280975/jquery-not-working-in-angular-6-err
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
 ```
+## Check: Add Font Awesome Icons
+In the index.html file:
+* ``` <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">```
+
 
