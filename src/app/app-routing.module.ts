@@ -8,8 +8,7 @@ import { WelcomeComponent } from './home/welcome.component';
     RouterModule.forRoot([
       { path: '', redirectTo: '/welcome', pathMatch: 'full' },
       {
-        path: '',
-        component: ShellComponent,
+        path: '', component: ShellComponent,
         children: [
           { path: 'welcome', component: WelcomeComponent }
         ]
