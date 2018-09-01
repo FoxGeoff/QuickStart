@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ShellComponent } from './home/shell.component';
+import { WelcomeComponent } from './home/welcome.component';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
+      { path: '', redirectTo: '/welcome', pathMatch: 'full' },
       {
         path: '',
-        redirectTo: '/app',
-        pathMatch: 'full'
+        component: ShellComponent,
+        children: [
+          { path: 'welcome', component: WelcomeComponent }
+        ]
       }
     ])
   ],
