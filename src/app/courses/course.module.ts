@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 @NgModule({
   imports: [
@@ -15,7 +17,7 @@ import { RouterModule } from '@angular/router';
       }
     ])
   ],
-  declarations: [],
+  declarations: [CourseListComponent, CourseDetailComponent],
   providers: [
     //CourseService,
     //CourseEditGuard

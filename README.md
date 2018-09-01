@@ -53,6 +53,8 @@ In the index.html file:
 
 ## Check: Add course module
 
+## Check: Add CourseList and CourseDetail Components
+
 
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
