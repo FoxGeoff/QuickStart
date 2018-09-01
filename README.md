@@ -47,6 +47,9 @@ In the index.html file:
 
 ## Check: Add app-routing.module
 
+## Check: Add page not found
+
+
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
 

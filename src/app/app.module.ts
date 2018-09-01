@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { ShellComponent } from './home/shell.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { WelcomeComponent } from './home/welcome.component';
+import { PageNotFoundComponent } from './home/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShellComponent,
     MenuComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
