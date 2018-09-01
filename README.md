@@ -35,7 +35,7 @@ Note: for Angular 6.x use in angular.json:
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css" 
             ],
-            "scripts": [  
+            "scripts": [   
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/popper.js/dist/umd/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -48,6 +48,8 @@ In the index.html file:
 ## Check: Add app-routing.module
 
 ## Check: Add page not found
+
+## Check: Add Course model
 
 
 ## Angular Ref:
