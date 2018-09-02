@@ -61,6 +61,8 @@ In the index.html file:
 
 ## Check: Fix CourseService
 
+## Check: Add ProductEdit Guard
+
 
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
