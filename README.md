@@ -63,6 +63,8 @@ In the index.html file:
 
 ## Check: Add CourseEdit Guard
 
+* Task: Add course list and detail pages
+
 
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
