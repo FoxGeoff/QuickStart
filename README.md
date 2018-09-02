@@ -55,6 +55,10 @@ In the index.html file:
 
 ## Check: Add CourseList and CourseDetail Components
 
+## Check: Add CourseService
+
+## Check: Add CourseEditComponet
+
 
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
