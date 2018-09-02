@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
-import { CourseService } from './../shared/course-service/course-service.component';
 import { CourseEditComponent } from './course-edit/course-edit.component';
+import { CourseService } from '../shared/course.service';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { CourseEditComponent } from './course-edit/course-edit.component';
       { path: ':id', component: CourseDetailComponent },
       {
         path: ':id/edit',
-        canDeactivate: [ CourseEditGuard ],
+        canDeactivate: [ /* CourseEditGuard */],
         component: CourseEditComponent
       }
     ])

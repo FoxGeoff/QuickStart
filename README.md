@@ -57,7 +57,9 @@ In the index.html file:
 
 ## Check: Add CourseService
 
-## Check: Add CourseEditComponet
+## Check: Add CourseEdit Component
+
+## Check: Fix CourseService
 
 
 ## Angular Ref:
