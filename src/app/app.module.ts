@@ -6,7 +6,6 @@ import { ShellComponent } from './home/shell.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { PageNotFoundComponent } from './home/page-not-found/page-not-found.component';
-import { CourseServiceComponent } from './shared/course-service/course-service.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,7 @@ import { CourseServiceComponent } from './shared/course-service/course-service.c
     ShellComponent,
     MenuComponent,
     WelcomeComponent,
-    PageNotFoundComponent,
-    CourseServiceComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

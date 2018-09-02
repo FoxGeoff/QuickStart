@@ -61,7 +61,7 @@ In the index.html file:
 
 ## Check: Fix CourseService
 
-## Check: Add ProductEdit Guard
+## Check: Add CourseEdit Guard
 
 
 ## Angular Ref:

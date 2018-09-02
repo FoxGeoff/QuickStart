@@ -6,6 +6,7 @@ import { CourseService } from '../shared/course.service';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CourseEditComponent } from './course-edit/course-edit.component';
 import { CourseListComponent } from './course-list/course-list.component';
+ 
 
 @NgModule({
   imports: [
