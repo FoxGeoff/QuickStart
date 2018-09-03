@@ -63,7 +63,7 @@ In the index.html file:
 
 ## Check: Add CourseEdit Guard
 
-* Task: Add course list and detail pages
+* Task: Add course list and detail pages - in work
 
 
 ## Angular Ref:
