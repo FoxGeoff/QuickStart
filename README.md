@@ -63,7 +63,11 @@ In the index.html file:
 
 ## Check: Add CourseEdit Guard
 
-* Task: Add course list and detail pages - in work.
+* Task: Add course list and detail pages - in work. 9/5/2018 @ 11:00am
+
+## Check: Add CouseService Code
+
+* Task run: ``` npm install rxjs --save ```
 
 
 ## Angular Ref:
