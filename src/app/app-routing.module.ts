@@ -11,7 +11,12 @@ import { WelcomeComponent } from './home/welcome.component';
       {
         path: '', component: ShellComponent,
         children: [
-          { path: 'welcome', component: WelcomeComponent }
+          { path: 'welcome', component: WelcomeComponent },
+          {
+            path: 'courses',
+            // canActivate: [AuthGuard],
+            loadChildren: './courses/course.module#CourseModule'
+          },
         ]
       },
       { path: '**', component: PageNotFoundComponent }
