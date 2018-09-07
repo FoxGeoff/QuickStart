@@ -69,6 +69,11 @@ In the index.html file:
 
 * Task run: ``` npm install rxjs --save ```
 
+## Check: Add in-memory-webapi
+* https://github.com/angular/in-memory-web-api 
+* https://www.npmjs.com/package/angular-in-memory-web-api
+* Run: ```npm i angular-in-memory-web-api  ```
+
 
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/

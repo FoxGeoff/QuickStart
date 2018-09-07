@@ -9,4 +9,5 @@ export interface Course {
     description: string;
     starRating: number;
     imageUrl: string;
+    category: string;
 }

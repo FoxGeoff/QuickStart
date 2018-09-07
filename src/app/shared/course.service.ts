@@ -1,78 +1,81 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
-import { of } from 'rxjs/observable/of';
+import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
+
+
+//import { Observable } from 'rxjs/Observable'
+//import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+//import { of } from 'rxjs/observable/of';
 
 import { catchError, tap } from 'rxjs/operators';
 
-import { IProduct } from './product';
+import { Course } from './../courses/course';
 
 @Injectable()
-export class ProductService {
-    private productsUrl = 'api/products';
+export class CourseService {
+    private coursesUrl = 'api/courses';
 
     constructor(private http: HttpClient) { }
 
-    getProducts(): Observable<IProduct[]> {
-        return this.http.get<IProduct[]>(this.productsUrl)
-                        .pipe(
-                            tap(data => console.log(JSON.stringify(data))),
-                            catchError(this.handleError)
-                        );
+    getCourses(): Observable<Course[]> {
+        return this.http.get<Course[]>(this.coursesUrl)
+            .pipe(
+                tap(data => console.log(JSON.stringify(data))),
+                catchError(this.handleError)
+            );
     }
 
-    getProduct(id: number): Observable<IProduct> {
+    getCourse(id: number): Observable<Course> {
         if (id === 0) {
-            return of(this.initializeProduct());
+            return of(this.initializeCourse());
         }
-        const url = `${this.productsUrl}/${id}`;
-        return this.http.get<IProduct>(url)
-                        .pipe(
-                            tap(data => console.log('Data: ' + JSON.stringify(data))),
-                            catchError(this.handleError)
-                        );
+        const url = `${this.coursesUrl}/${id}`;
+        return this.http.get<Course>(url)
+            .pipe(
+                tap(data => console.log('Data: ' + JSON.stringify(data))),
+                catchError(this.handleError)
+            );
     }
 
-    saveProduct(product: IProduct): Observable<IProduct> {
+    saveCourse(product: Course): Observable<Course> {
         const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
         if (product.id === 0) {
-            return this.createProduct(product, headers);
+            return this.createCourse(product, headers);
         }
-        return this.updateProduct(product, headers);
+        return this.updateCourse(product, headers);
     }
 
-    deleteProduct(id: number): Observable<IProduct> {
+    deleteCourse(id: number): Observable<Course> {
         const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-        const url = `${this.productsUrl}/${id}`;
-        return this.http.delete<IProduct>(url, { headers: headers} )
-                        .pipe(
-                            tap(data => console.log('deleteProduct: ' + id)),
-                            catchError(this.handleError)
-                        );
+        const url = `${this.coursesUrl}/${id}`;
+        return this.http.delete<Course>(url, { headers: headers })
+            .pipe(
+                tap(data => console.log('deleteCourse: ' + id)),
+                catchError(this.handleError)
+            );
     }
 
-    private createProduct(product: IProduct, headers: HttpHeaders): Observable<IProduct> {
+    private createCourse(product: Course, headers: HttpHeaders): Observable<Course> {
         product.id = null;
-        return this.http.post<IProduct>(this.productsUrl, product,  { headers: headers} )
-                        .pipe(
-                            tap(data => console.log('createProduct: ' + JSON.stringify(data))),
-                            catchError(this.handleError)
-                        );
+        return this.http.post<Course>(this.coursesUrl, product, { headers: headers })
+            .pipe(
+                tap(data => console.log('createCourse: ' + JSON.stringify(data))),
+                catchError(this.handleError)
+            );
     }
 
-    private updateProduct(product: IProduct, headers: HttpHeaders): Observable<IProduct> {
-        const url = `${this.productsUrl}/${product.id}`;
-        return this.http.put<IProduct>(url, product, { headers: headers} )
-                        .pipe(
-                            tap(data => console.log('updateProduct: ' + product.id)),
-                            catchError(this.handleError)
-                        );
+    private updateCourse(product: Course, headers: HttpHeaders): Observable<Course> {
+        const url = `${this.coursesUrl}/${product.id}`;
+        return this.http.put<Course>(url, product, { headers: headers })
+            .pipe(
+                tap(data => console.log('updateCourse: ' + product.id)),
+                catchError(this.handleError)
+            );
     }
 
-    private initializeProduct(): IProduct {
+    private initializeCourse(): Course {
         // Return an initialized object
         return {
             'id': 0,
