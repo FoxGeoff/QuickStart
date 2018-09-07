@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
-import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
+import {ErrorObserver, Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
 
 
 //import { Observable } from 'rxjs/Observable'
@@ -20,7 +20,7 @@ export class CourseService {
 
     getCourses(): Observable<Course[]> {
         return this.http.get<Course[]>(this.coursesUrl)
-            .pipe(
+        .pipe(
                 tap(data => console.log(JSON.stringify(data))),
                 catchError(this.handleError)
             );

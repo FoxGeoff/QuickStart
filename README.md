@@ -74,7 +74,12 @@ In the index.html file:
 * https://www.npmjs.com/package/angular-in-memory-web-api
 * Run: ```npm i angular-in-memory-web-api  ```
 
-
+***
+## Angular 6 Observable Notes:
+* https://stackoverflow.com/questions/49840152/i-get-an-error-when-learning-angular-has-no-exported-member-observable
+* https://github.com/ReactiveX/rxjs/blob/master/docs_app/content/guide/v6/migration.md
+* https://next.angular.io/guide/rx-library
+***
 ## Angular Ref:
 * https://www.sitepoint.com/ultimate-angular-cli-reference/
 
